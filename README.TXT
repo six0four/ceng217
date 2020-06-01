@@ -16,4 +16,4 @@ The purpose of this project is to introduce regression testing using JUnit. It i
 a test class that demonstrates some of the testing functionality. Testing is further 
 discussed in the book.
 
-NOTE: There are several serious errors to be found in these classes.
+NOTE: There are several serious errors to be found in these classes. GIT
