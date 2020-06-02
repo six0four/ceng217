@@ -11,6 +11,8 @@ import org.junit.Test;
  */
 public class SalesItemTest
 {
+    private SalesItem salesIte1;
+
     /**
      * Default constructor for test class SalesItemTest
      */
@@ -26,6 +28,9 @@ public class SalesItemTest
     @Before
     public void setUp()
     {
+        salesIte1 = new SalesItem("A red mountain bike", 10000);
+        salesIte1.addComment("David", "I think blue bikes are better", 3);
+        salesIte1.addComment("Michael", "The price is too high", 2);
     }
 
     /**
@@ -76,7 +81,23 @@ public class SalesItemTest
         SalesItem salesIte1 = new SalesItem("Brain Surgery for Dummies.", 9899);
         assertEquals(true, salesIte1.addComment("Fred", "Great - I perform brain surgery every week now!", 4));
     }
+
+    @Test
+    public void testInitialPrice()
+    {
+        SalesItem salesIte1 = new SalesItem("A red mountain bike", 10000);
+        assertEquals(10000, salesIte1.getPrice());
+    }
+
+    @Test
+    public void testName()
+    {
+        SalesItem salesIte1 = new SalesItem("A red mountain bike", 10000);
+        assertEquals("A red mountain bike", salesIte1.getName());
+    }
 }
+
+
 
 
 
